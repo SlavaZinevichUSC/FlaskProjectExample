@@ -20,6 +20,7 @@ def FromFile(path):
     return TorchOracle(torch.load(path), GetPredictionMap())
 
 def Local():
+    #used for testing but not necessary. deleted to save room in project
     return FromFile('/Users/slavazinevich/Documents/USC/DirectedResearch/Models/Torch/resNet50.pth')
 
 def GetPredictionMap(url = 'https://raw.githubusercontent.com/pytorch/hub/master/imagenet_classes.txt'):

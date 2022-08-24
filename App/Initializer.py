@@ -4,7 +4,7 @@ from Infrastructure import Config, Logger, Resolver
 from Api import ApiEndpoint as ApiInit
 
 
-# This project is designed as a monolithic App instance which is different from backend design like lambda etc
+# This project is designed as a monolithic App instance so the model exists in the same instance as the flask api
 # but I'm using this as an opportunity to demonstrate front end (a la react) design patterns for the DR position
 
 class Initializer():

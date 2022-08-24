@@ -6,7 +6,7 @@ from Global import Core
 def BadRequestResponse():
     return Response("Bad request", status=400)
 
-
+#the flask app is entirely contained here but could be broken down further
 def CreateApp(name = "__main__"):
     folder = Core.Config.Get('template_folder')
     folder = folder if folder is not None else 'templates'
@@ -26,7 +26,6 @@ def CreateApp(name = "__main__"):
         if img is None:
             return BadRequestResponse()
         preds = Core.Resolver.model.GetPredictions(img)
-        outputPreds = '\n'.join(preds)
-        return jsonify({'predictions': outputPreds})
+        return jsonify(preds)
 
     return app

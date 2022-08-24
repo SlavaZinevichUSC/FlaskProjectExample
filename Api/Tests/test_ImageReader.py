@@ -6,5 +6,5 @@ def test_from_binary_returns_None_when_invalid():
     assert ImageReader.FromBinary(input) == None
 
 def test_from_binary_returns_Some_when_invalid():
-    input = open("test_dog.jpg", 'r')
+    input = open("test_dog.jpg", 'rb')
     assert ImageReader.FromBinary(input) != None

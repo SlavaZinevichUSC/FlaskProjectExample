@@ -5,7 +5,7 @@ from Global import Core
 @pytest.fixture()
 def dog():
     dog = open('test_dog.jpg', 'rb')
-    return dog
+    yield dog
 
 @pytest.fixture()
 def app():
