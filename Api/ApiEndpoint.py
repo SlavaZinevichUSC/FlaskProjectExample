@@ -1,9 +1,11 @@
 from .Flask import FlaskFactory
 from Global import Core
+import os
 class ApiEndpoint():
-    def __init__(self):
-        self.app = FlaskFactory.CreateApp()
+    def __init__(self, name):
+        self.app = FlaskFactory.CreateApp(name)
         pass
 
     def Run(self):
-        self.app.run(host="localhost", port=Core.Config.Get('port'), debug=True)
+        port = int(os.environ.get('PORT', Core.Config.Get('port')))
+        self.app.run(host="0.0.0.0", port=port, debug=True)

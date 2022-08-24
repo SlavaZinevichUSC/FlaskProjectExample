@@ -1,10 +1,10 @@
 from Global import Core
 # should load from json file or pythons native config but basic
 # initialization is sufficient for this example
-config = {'oracle': 'local',
+config = {'oracle': 'hub',
           'default_num_predictions' : 5,
           'template_folder' : 'templates',
-          'port' : '8000'}
+          'port' : '5000'}
 
 
 class Config():

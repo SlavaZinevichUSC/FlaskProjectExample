@@ -7,10 +7,10 @@ def BadRequestResponse():
     return Response("Bad request", status=400)
 
 
-def CreateApp():
+def CreateApp(name = "__main__"):
     folder = Core.Config.Get('template_folder')
     folder = folder if folder is not None else 'templates'
-    app = Flask("__main__", template_folder=folder)
+    app = Flask(name, template_folder=folder)
     #easter egg
     @app.route('/', methods=['GET'])
     def Hello():

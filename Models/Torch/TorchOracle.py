@@ -3,7 +3,6 @@ import urllib.request
 import torch
 from Global import Core
 from torchvision import transforms
-import urllib3
 
 def Load():
     type = Core.Config.Get('oracle')
