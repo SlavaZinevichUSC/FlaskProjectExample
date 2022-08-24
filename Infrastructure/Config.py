@@ -1,8 +1,10 @@
-
+from Global import Core
 # should load from json file or pythons native config but basic
-# initalization is sufficient for this example
-config = {'oracle': 'hub',
-          'numPredictions' : 5}
+# initialization is sufficient for this example
+config = {'oracle': 'local',
+          'default_num_predictions' : 5,
+          'template_folder' : 'templates',
+          'port' : '8000'}
 
 
 class Config():
@@ -18,7 +20,7 @@ class Config():
         # obviously no path or any parsing involved in this toy
         if (path in config):
             return self.config[path]
-        Global.Logger.warning('key not found in configuration')
+        Core.Logger.warning(f'key {path} not found in configuration')
         return None
 
 

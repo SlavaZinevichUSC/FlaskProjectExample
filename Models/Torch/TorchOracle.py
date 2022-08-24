@@ -59,8 +59,8 @@ class TorchOracle():
 
     def __GetDefaultNum(self, numPredictions):
         if numPredictions is None:
-            numPredictions = Core.Config.Get('defaultNumPredictions')
-            if(numPredictions is None):
+            numPredictions = Core.Config.Get('default_num_predictions')
+            if numPredictions is None:
                 Core.Logger.warning("default prediction number is not define in config")
                 numPredictions = 5
         return numPredictions

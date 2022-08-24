@@ -16,3 +16,4 @@ class Initializer():
         # App -> Infrastructure -> Domain specific directories/packages/applications
         Core.Resolver.AddResource("model", ModelInit.ModelEndpoint())
         Core.Resolver.AddResource("api", ApiInit.ApiEndpoint())
+        Core.Resolver.api.Run()
