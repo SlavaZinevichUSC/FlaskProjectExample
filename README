@@ -1,0 +1,3 @@
+This project was a take-home interview problem.
+The task of this application is to create a containerized flask server that can recieve and classify images using RESnet.
+It is broken down into domains, with the core goal to showcase software design principles needed for a long term development project.
